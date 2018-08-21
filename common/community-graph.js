@@ -15,6 +15,25 @@ function userTile(obj) {
         '</div>';
 }
 
+function progLanguage (lang) {
+    // Need image tile
+    return '<div class="proglanguage">' + lang + '</div>';
+}
+
+function dateFormat(str) {
+    var d = new Date(str);
+    var months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+    var month = months[d.getMonth()];
+    var year = d.getFullYear();
+    var dt = d.getDate();
+
+    return month + ' ' + dt + ', ' + year;
+}
+
 var queries = {
     topContent: {
         query: `{
@@ -69,6 +88,7 @@ var queries = {
                 url
                 description
                 releaseDate
+                language
                 author {
                   name
                   screenName
@@ -82,8 +102,9 @@ var queries = {
             projs.map(proj => {
                 $("ul#communityOpenSource").append(
                     '<li class="communityopensource">' +
-                    new Date(proj.releaseDate) + ' ' + 
+                    dateFormat(proj.releaseDate) + ' ' + 
                     contentLink(proj.title, proj.url) + 
+                    progLanguage(proj.language) + 
                     userTile(proj.author) + 
                     "</li>");
             });
