@@ -1,5 +1,34 @@
 <!--SECTION BANNER BOX-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://rawgit.com/f/graphql.js/master/graphql.min.js?v1"></script>
+<script>
+    var endpoint = "https://community-graphql-api.now.sh/";
 
+    function genericError(err) {
+        console.error('Kudos to Nav; ', err);
+    }
+
+    function graphQL(query, success, fail) {
+        if (!fail) {
+            fail = genericError;
+        }
+
+        return $.ajax({
+            url: endpoint,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                operationName:null,
+                variables: {},
+                query: query
+            }),
+            success: success,
+            error: fail
+        });
+    }
+
+    graphQL('{ topCommunityBlogsAndContent { url title avatar } }', data => console.log(data));
+</script>
 <section class="banner-box">
 
         <div class="container">
