@@ -113,7 +113,7 @@ var queries = {
 
             // Featured comm member.
             $("div#featuredDeveloper").append(
-                "<img class='featured member' src='" + featuredMember.image + "' alt='" +
+                "<img style='height: 100%; width: 100%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
                 twin4j.date + "'" + 
                 "/>"
             )
