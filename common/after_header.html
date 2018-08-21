@@ -12,34 +12,34 @@
         topDevs: {
             query: `{
                 topNewCertifiedDevelopers {
-                certificationDate
-                username
-                name
-                avatar
+                    certificationDate
+                    username
+                    name
+                    avatar
                 }
             }`,
         },
         topProjects: {
             query: `{
                 topCommunityOpenSourceProjects{
-                url
-                title
-                releaseDate
-                description
+                    url
+                    title
+                    releaseDate
+                    description
                 }
             }`,
         },
         twin4j: {
             query: `{
                 thisWeekInNeo4j {
-                featuredCommunityMember{
-                    image
-                }
-                date
-                url
-                text
-                }
-            }`
+                    featuredCommunityMember{
+                        image
+                    }
+                    date
+                    url
+                    text
+                    }
+                }`
         }
     }
 
@@ -47,11 +47,11 @@
         console.error('Kudos to Nav; ', err);
     }
 
-    function graphQL(package, success, fail) {
+    function graphQL(query, success, fail) {
         if (!fail) {
             fail = genericError;
         }
-
+        
         return $.ajax({
             url: endpoint,
             type: 'POST',
@@ -59,7 +59,7 @@
             data: JSON.stringify({
                 operationName:null,
                 variables: {},
-                query: package.query
+                query: query
             }),
             success: success,
             error: fail
@@ -70,6 +70,7 @@
     function onPageLoad() {
         Object.keys(queries).map(key => {
             var pkg = queries[key];
+            console.log('PKG',pkg);
             graphQL(pkg.query, data => {
                 console.log('Query ', key, 'succeeded', data);
 
