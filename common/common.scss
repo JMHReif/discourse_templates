@@ -23,6 +23,14 @@ $background-color: #FBDE9C;
     background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
 }
 
+//show only on main page
+.navigation-categories .banner-box {
+    display: block;
+}
+.banner-box {
+    display: none;
+}
+
 .x-title {
     padding-left: 15px;
     padding-right: 15px;
