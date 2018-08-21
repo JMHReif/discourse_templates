@@ -1,18 +1,24 @@
 var endpoint = "https://community-graphql-api.now.sh/";
 
 function avatar(data) {
-    return "<img alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> ";
+    return (
+        "<a href='/users/" + data.name + "' alt='" + (data.name || data.screenName) + "'>" +
+        "<img alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> " + 
+        "</a>"
+    );
 }
 
 function contentLink(title, url) {
     return "<a class='community content' href='" + url + "'>" + title + "</a>";
 }
 
-function userTile(obj) {    
-    return '<div class="user tile">' +
-        avatar(obj) + 
-        (obj.screenName || obj.name) + 
-        '</div>';
+function userTile(data) {    
+    return ('<div class="user tile">' +
+        avatar(data) + 
+        "<a href='/users/" + data.name + "'>" + 
+        (data.name || data.screenName) + 
+        "</a>" +
+        '</div>');
 }
 
 function progLanguage (lang) {
@@ -76,7 +82,8 @@ var queries = {
             devs.map(obj => obj.developer).forEach(dev => {
                 $("ul#devList").append('<li class="developer">' + 
                     avatar(dev) + 
-                    dev.name + '</li>');
+                    contentLink(dev.screenName || dev.name, 
+                        '/users/' + dev.name) + '</li>');
             });
             //$('ul#devList')
         }
