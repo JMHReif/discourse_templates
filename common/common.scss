@@ -14,26 +14,27 @@ $background-color: #FBDE9C;
     }
 }
 
-.banner-box {
-    margin-bottom: 20px;
-    background-image: url("https://i.imgur.com/k7SnZth.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
-}
+//.banner-box {
+//    margin-bottom: 20px;
+//    background-image: url("https://i.imgur.com/k7SnZth.jpg");
+//    background-size: cover;
+//    background-position: center center;
+//    background-repeat: no-repeat;
+//    background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
+//}
 
 //show only on main page
-//.navigation-categories .banner-box {
-//    display: block;
-//}
-//.banner-box {
-//    display: none;
-//}
-.navigation-categories {
-  .banner-box {
+.navigation-categories .banner-box {
     display: block;
-  }
+}
+.banner-box {
+  margin-bottom: 20px;
+  background-image: url("https://i.imgur.com/k7SnZth.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
+  display: none;
 }
 
 .x-title {
