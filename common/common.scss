@@ -2,7 +2,7 @@
    VARIABLES: choose the colors of your banner
 -------------------------------------------------*/
 $main-color: #FF6C00;
-$background-color: #FBDE9C;
+$background-color: #3A87C6;
 
 /*-------------------------------------------------
    SECTION:  BOXES
@@ -17,7 +17,7 @@ $background-color: #FBDE9C;
 //show only on main page
 .banner-box {
   margin-bottom: 20px;
-  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/bluegreen_gradient.png");
+  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
