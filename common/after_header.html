@@ -1,35 +1,6 @@
-     <!--SECTION BANNER BOX-->
-<!--script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="./community-graph.js"></script-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./community-graph.js"></script>
 
-<script>
-    $(document).ready(function() {
-        alert("Elite hax0r!");
-    })
-</script>
-
-<script>
-    var pageData = {};
-    function onPageLoad() {
-        Object.keys(queries).map(key => {
-            var pkg = queries[key];
-            console.log('PKG',pkg);
-            var query = pkg.query;
-            var handler = pkg.handler;
-
-            graphQL(pkg.query, data => {
-                console.log('Query ', key, 'succeeded', data);
-
-                if (handler) { handler(data); }
-                pageData[query] = data;
-            }, err => {
-                console.error('Query ', key, 'failed', err);
-            });
-        })
-    }
-
-    onPageLoad();
-</script>
 <section class="welcome banner-box">
 
         <div class="welcome container">
@@ -75,26 +46,9 @@
                         <img src="https://i.imgur.com/oRoO3Ya.png" class="responsive-img">
         
                         <!--HEADING-->
-                        <h3>Featured Developer of the Week</h3>
-        
-                        <pre>
-        
-                        </pre>
-        
-                        <!--BOX DESCRIPTION-->
-                        <p class="weekly box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed id congue eros, sit amet suscipit libero. Nunc vitae placerat est.
-                            Sed ornare sit amet justo eu rutrum. Integer sit amet facilisis ipsum.</p>
-        
-                        <!--LIST-->
-                        <div>
-                            <ul class="feature-list">
-                                <li><i class="fa fa-coffee"></i><a href="your-url"> Coffee and milk</a> to wake up in the morning</li>
-                                <li><i class="fa fa-heartbeat"></i> One hour of gym</li>
-                                <li><i class="fa fa-book"></i> Rearrange books in the study</li>
-                            </ul>
-                        </div>
-        
+                        <h3>Featured Community Member of the Week</h3>
+                
+                        <!-- img to be appended -->
                     </div>
                     <!--/END SINGLE BOX-->
         
@@ -104,17 +58,10 @@
                         <!--IMAGE-->
                         <img src="https://i.imgur.com/ZCXib8B.png" class="responsive-img">
         
-        
                         <!--HEADING-->
                         <h3>This Week in Neo4j</h3>
         
-                        <!--BOX DESCRIPTION-->
-                        <p class="weekly box">Integer velit ante, <a href="www.discourse.org">DISCOURSE</a> amet tristique in, gravida at ligula.
-                            Sed gravida mauris id neque vestibulum semper. Suspendisse potenti. Nam nec maximus ligula.
-                            Ut eget semper est. Sed ornare sit amet justo eu rutrum. Integer sit amet facilisis ipsum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Sed id congue eros, sit amet suscipit libero. Nunc vitae placerat est.</p>
-        
+                        <div id="twin4jContainer"></div>
                     </div>
                     <!--/END SINGLE BOX-->
         
@@ -178,19 +125,10 @@
                     <!--HEADING-->
                     <h3>Community Blogs and Content</h3>
 
-                    <ul id="communityBlogs">                        
-                    </ul>
-
-                    <!--BOX DESCRIPTION-->
-                    <p class="content box">Integer velit ante, <a href="www.discourse.org">DISCOURSE</a> amet tristique in, gravida at ligula.
-                        Sed gravida mauris id neque vestibulum semper. Suspendisse potenti. Nam nec maximus ligula.
-                        Ut eget semper est. Sed ornare sit amet justo eu rutrum. Integer sit amet facilisis ipsum. </p>
-
-                    <!--BUTTON-->
-                    <div class="buttons" id="my-button">
-                        <a href="enter-a-url" class="btn btn-icon-text ember-view"><i class="fa fa-user-plus d-icon d-icon-user-plus"></i>My new button</a>
+                    <div>
+                        <ul id="communityBlogs" class="feature-list">                        
+                        </ul>
                     </div>
-
                 </div>
                 <!--/END SINGLE BOX-->
 
@@ -203,13 +141,12 @@
                     <!--HEADING-->
                     <h3>Community Open Source Projects</h3>
 
-                    <!--BOX DESCRIPTION-->
-                    <p class="content box">Pellentesque ut lacinia nunc, eu molestie nulla.
-                        Pellentesque viverra nisi urna, at hendrerit nisl sodales in.
-                        Morbi auctor sodales nisi, eget aliquam justo maximus in.
-                        Suspendisse a felis a massa elementum pellentesque quis eget dolor.
-                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    <div>
+                        <p class="content box">Check out what's happening in code</p>
 
+                        <ul id="communityOpenSource" class="feature-list">                            
+                        </ul>
+                    </div>
                 </div>
                 <!--/END SINGLE BOX-->
 
