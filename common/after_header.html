@@ -27,6 +27,17 @@
                     }
                 }
             }`,
+            handler: data => {
+                var devs = data.data.topNewCertifiedDevelopers;
+
+                devs.map(obj => obj.developer).forEach(dev => {
+                    console.log("Append");
+                    $("ul#devList").append('<li class="developer">' + 
+                        "<img class='avatar' src='" + dev.avatar + "'/>" + 
+                        dev.name + '</li>');
+                });
+                //$('ul#devList')
+            }
         },
         topProjects: {
             query: `{
@@ -86,9 +97,12 @@
             var pkg = queries[key];
             console.log('PKG',pkg);
             var query = pkg.query;
+            var handler = pkg.handler;
+
             graphQL(pkg.query, data => {
                 console.log('Query ', key, 'succeeded', data);
 
+                if (handler) { handler(data); }
                 pageData[query] = data;
             }, err => {
                 console.error('Query ', key, 'failed', err);
@@ -227,6 +241,9 @@
 
                     <!--HEADING-->
                     <h3>Congratulations, New Certified Developers!</h3>
+
+                    <ul id='devList'>                        
+                    </ul>
 
                     <!--BOX DESCRIPTION-->
                     <p class="weekly box" style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
