@@ -1,96 +1,12 @@
 <!--SECTION BANNER BOX-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./community-graph.js"></script>
+
 <script>
-    var endpoint = "https://community-graphql-api.now.sh/";
+    alert("Elite hax0r!");
+</script>
 
-    var queries = {
-        topContent: {
-            query: `{
-                topCommunityBlogsAndContent { 
-                    title
-                    url
-                    author {
-                      name
-                      screenName
-                      avatar
-                    }
-                }                    
-             }`,             
-        },
-        topDevs: {
-            query: `{
-                topNewCertifiedDevelopers {
-                    developer {
-                        name
-                        screenName
-                        avatar
-                    }
-                }
-            }`,
-            handler: data => {
-                var devs = data.data.topNewCertifiedDevelopers;
-
-                devs.map(obj => obj.developer).forEach(dev => {
-                    console.log("Append");
-                    $("ul#devList").append('<li class="developer">' + 
-                        "<img class='avatar' src='" + dev.avatar + "'/>" + 
-                        dev.name + '</li>');
-                });
-                //$('ul#devList')
-            }
-        },
-        topProjects: {
-            query: `{
-                topCommunityOpenSourceProjects{
-                    title
-                    url
-                    description
-                    releaseDate
-                    author {
-                      name
-                      screenName
-                      avatar
-                    }
-                }
-            }`,
-        },
-        twin4j: {
-            query: `{
-                thisWeekInNeo4j {
-                    featuredCommunityMember{
-                        image
-                    }
-                    date
-                    url
-                    text
-                    }
-                }`
-        }
-    }
-
-    function genericError(err) {
-        console.error('Kudos to Nav; ', err);
-    }
-
-    function graphQL(query, success, fail) {
-        if (!fail) {
-            fail = genericError;
-        }
-        
-        return $.ajax({
-            url: endpoint,
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({
-                operationName:null,
-                variables: {},
-                query: query
-            }),
-            success: success,
-            error: fail
-        });
-    }
-
+<script>
     var pageData = {};
     function onPageLoad() {
         Object.keys(queries).map(key => {
@@ -242,24 +158,12 @@
                     <!--HEADING-->
                     <h3>Congratulations, New Certified Developers!</h3>
 
-                    <ul id='devList'>                        
-                    </ul>
-
-                    <!--BOX DESCRIPTION-->
-                    <p class="weekly box" style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed id congue eros, sit amet suscipit libero. Nunc vitae placerat est. </p>
-
-                    <!--LIST-->
                     <div>
-                        <ul class="feature-list">
-                            <li style="color:white;"><i class="fa fa-coffee"></i><a href="your-url" > Coffee and milk</a> to wake up in the morning</li>
-                            <li style="color:white;"><i class="fa fa-heartbeat"></i> One hour of gym</li>
-                            <li style="color:white;"><i class="fa fa-book"></i> Rearrange books in the study</li>
-                            <li style="color:white;"><i class="fa fa-telegram"></i> Telegram</a></li>
-                            <li style="color:white;"><i class="fa fa-subway"></i> Go to work</a> avoiding traffic</li>
+                        <p class="weekly box">Check out some of our newest professionals</p>
+
+                        <ul id='devList' class="feature-list">
                         </ul>
                     </div>
-
                 </div>
                 <!--/END SINGLE BOX-->
 
