@@ -166,7 +166,7 @@ function graphQL(query, success, fail) {
 }
 
 var pageData = {};
-function onPageLoad() {
+function pageReady() {
     Object.keys(queries).map(key => {
         var pkg = queries[key];
         var query = pkg.query;
@@ -183,4 +183,5 @@ function onPageLoad() {
     })
 }
 
-onPageLoad();
+$(document).ready(pageReady);
+
