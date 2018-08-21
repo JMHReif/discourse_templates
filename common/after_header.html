@@ -4,6 +4,38 @@
 <script>
     var endpoint = "https://community-graphql-api.now.sh/";
 
+    var queries = {
+        topContent: `{
+            topCommunityBlogsAndContent { url title avatar }
+        }`,
+        topDevs: `{
+            topNewCertifiedDevelopers {
+              certificationDate
+              username
+              name
+              avatar
+            }
+        }`,
+        topProjects: `{
+            topCommunityOpenSourceProjects{
+              url
+              title
+              releaseDate
+              description
+            }
+        }`,
+        twin4j: `{
+            thisWeekInNeo4j {
+              featuredCommunityMember{
+                image
+              }
+              date
+              url
+              text
+            }
+        }`
+    }
+
     function genericError(err) {
         console.error('Kudos to Nav; ', err);
     }
@@ -27,7 +59,20 @@
         });
     }
 
-    graphQL('{ topCommunityBlogsAndContent { url title avatar } }', data => console.log(data));
+    var pageData = {};
+    function onPageLoad() {
+        Object.keys(queries).map(key => {
+            var query = queries[key];
+            graphQL(query, data => {
+                console.log('Query ', key, 'succeeded', data);
+                pageData[query] = data;
+            }, err => {
+                console.error('Query ', key, 'failed', err);
+            });
+        })
+    }
+
+    onPageLoad();
 </script>
 <section class="banner-box">
 
