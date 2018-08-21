@@ -15,9 +15,8 @@ $background-color: #FFFFFF;
 }
 
 //show only on main page
-.welcome.banner-box {
+.banner-box {
   margin-bottom: 20px;
-  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -28,6 +27,15 @@ $background-color: #FFFFFF;
 }
 .navigation-categories .banner-box {
   display: block;
+}
+.welcome.banner-box {
+  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
+}
+.weekly.banner-box {
+  background-color: $main-color;
+}
+.content.banner-box {
+  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/20180212150616/background.jpg");
 }
 
 .title {
