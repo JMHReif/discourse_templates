@@ -1,4 +1,78 @@
 <!--SECTION BANNER BOX-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    var endpoint = "https://community-graphql-api.now.sh/";
+
+    var queries = {
+        topContent: `{
+            topCommunityBlogsAndContent { url title avatar }
+        }`,
+        topDevs: `{
+            topNewCertifiedDevelopers {
+              certificationDate
+              username
+              name
+              avatar
+            }
+        }`,
+        topProjects: `{
+            topCommunityOpenSourceProjects{
+              url
+              title
+              releaseDate
+              description
+            }
+        }`,
+        twin4j: `{
+            thisWeekInNeo4j {
+              featuredCommunityMember{
+                image
+              }
+              date
+              url
+              text
+            }
+        }`
+    }
+
+    function genericError(err) {
+        console.error('Kudos to Nav; ', err);
+    }
+
+    function graphQL(query, success, fail) {
+        if (!fail) {
+            fail = genericError;
+        }
+
+        return $.ajax({
+            url: endpoint,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                operationName:null,
+                variables: {},
+                query: query
+            }),
+            success: success,
+            error: fail
+        });
+    }
+
+    var pageData = {};
+    function onPageLoad() {
+        Object.keys(queries).map(key => {
+            var query = queries[key];
+            graphQL(query, data => {
+                console.log('Query ', key, 'succeeded', data);
+                pageData[query] = data;
+            }, err => {
+                console.error('Query ', key, 'failed', err);
+            });
+        })
+    }
+
+    onPageLoad();
+</script>
 <section class="welcome banner-box">
 
         <div class="welcome container">
