@@ -24,11 +24,16 @@ $background-color: #FBDE9C;
 }
 
 //show only on main page
-.navigation-categories .banner-box {
+//.navigation-categories .banner-box {
+//    display: block;
+//}
+//.banner-box {
+//    display: none;
+//}
+.navigation-categories {
+  .banner-box {
     display: block;
-}
-.banner-box {
-    display: none;
+  }
 }
 
 .x-title {
