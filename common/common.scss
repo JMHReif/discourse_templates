@@ -15,7 +15,7 @@ $background-color: #FFFFFF;
 }
 
 //show only on main page
-.banner-box {
+.welcome.banner-box {
   margin-bottom: 20px;
   background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
   background-size: cover;
@@ -30,7 +30,7 @@ $background-color: #FFFFFF;
   display: block;
 }
 
-.x-title {
+.title {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
