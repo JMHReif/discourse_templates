@@ -4,42 +4,50 @@
     var endpoint = "https://community-graphql-api.now.sh/";
 
     var queries = {
-        topContent: `{
-            topCommunityBlogsAndContent { url title avatar }
-        }`,
-        topDevs: `{
-            topNewCertifiedDevelopers {
-              certificationDate
-              username
-              name
-              avatar
-            }
-        }`,
-        topProjects: `{
-            topCommunityOpenSourceProjects{
-              url
-              title
-              releaseDate
-              description
-            }
-        }`,
-        twin4j: `{
-            thisWeekInNeo4j {
-              featuredCommunityMember{
-                image
-              }
-              date
-              url
-              text
-            }
-        }`
+        topContent: {
+            query: `{
+                topCommunityBlogsAndContent { url title avatar }
+             }`,             
+        },
+        topDevs: {
+            query: `{
+                topNewCertifiedDevelopers {
+                certificationDate
+                username
+                name
+                avatar
+                }
+            }`,
+        },
+        topProjects: {
+            query: `{
+                topCommunityOpenSourceProjects{
+                url
+                title
+                releaseDate
+                description
+                }
+            }`,
+        },
+        twin4j: {
+            query: `{
+                thisWeekInNeo4j {
+                featuredCommunityMember{
+                    image
+                }
+                date
+                url
+                text
+                }
+            }`
+        }
     }
 
     function genericError(err) {
         console.error('Kudos to Nav; ', err);
     }
 
-    function graphQL(query, success, fail) {
+    function graphQL(package, success, fail) {
         if (!fail) {
             fail = genericError;
         }
@@ -51,7 +59,7 @@
             data: JSON.stringify({
                 operationName:null,
                 variables: {},
-                query: query
+                query: package.query
             }),
             success: success,
             error: fail
@@ -61,9 +69,10 @@
     var pageData = {};
     function onPageLoad() {
         Object.keys(queries).map(key => {
-            var query = queries[key];
-            graphQL(query, data => {
+            var pkg = queries[key];
+            graphQL(pkg.query, data => {
                 console.log('Query ', key, 'succeeded', data);
+
                 pageData[query] = data;
             }, err => {
                 console.error('Query ', key, 'failed', err);
@@ -112,13 +121,13 @@
             <div class="row">
 
                 <!--SINGLE BOX-->
-                <div class="col3 single-box">
+                <div class="col3 single-box" id="newCertifiedDevelopers">
 
                     <!--ICON-->
                     <div class="weekly-icon"><i class="fa fa-cloud"></i></div>
 
                     <!--HEADING-->
-                    <h3>A simple box</h3>
+                    <h3>Congratulations, New Certified Developers!</h3>
 
                     <!--BOX DESCRIPTION-->
                     <p class="weekly box" style="color:white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -139,13 +148,16 @@
                 <!--/END SINGLE BOX-->
 
                 <!--SINGLE BOX-->
-                <div class="col3 single-box">
+                <div class="col3 single-box" id="communityBlogs">
 
                     <!--ICON-->
                     <div class="weekly-icon"><i class="fa fa-rocket"></i></div>
 
                     <!--HEADING-->
-                    <h3>Another simple box</h3>
+                    <h3>Community Blogs and Content</h3>
+
+                    <ul id="communityBlogs">                        
+                    </ul>
 
                     <!--BOX DESCRIPTION-->
                     <p class="weekly box" style="color:white;">Integer velit ante, <a href="www.discourse.org">DISCOURSE</a> amet tristique in, gravida at ligula.
@@ -161,13 +173,13 @@
                 <!--/END SINGLE BOX-->
 
                 <!--SINGLE BOX-->
-                <div class="col3 single-box">
+                <div class="col3 single-box" id="communityOpenSource">
 
                     <!--ICON-->
                     <div class="weekly-icon"><i class="fa fa-cog"></i></div>
 
                     <!--HEADING-->
-                    <h3>Yet another simple box</h3>
+                    <h3>Community Open Source Projects</h3>
 
                     <!--BOX DESCRIPTION-->
                     <p class="weekly box" style="color:white;">Pellentesque ut lacinia nunc, eu molestie nulla.
@@ -212,13 +224,17 @@
         <div class="row">
 
             <!--SINGLE BOX-->
-            <div class="col2 single-box">
+            <div class="col2 single-box" id="featuredDeveloper">
 
                 <!--IMAGE-->
                 <img src="https://i.imgur.com/oRoO3Ya.png" class="responsive-img">
 
                 <!--HEADING-->
-                <h3>A simple box</h3>
+                <h3>Featured Developer of the Week</h3>
+
+                <pre>
+
+                </pre>
 
                 <!--BOX DESCRIPTION-->
                 <p class="content box">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -238,14 +254,14 @@
             <!--/END SINGLE BOX-->
 
             <!--SINGLE BOX-->
-            <div class="col2 single-box" style="float: right">
+            <div class="col2 single-box" style="float: right" id="twin4j">
 
                 <!--IMAGE-->
                 <img src="https://i.imgur.com/ZCXib8B.png" class="responsive-img">
 
 
                 <!--HEADING-->
-                <h3>Another simple box</h3>
+                <h3>This Week in Neo4j</h3>
 
                 <!--BOX DESCRIPTION-->
                 <p class="content box">Integer velit ante, <a href="www.discourse.org">DISCOURSE</a> amet tristique in, gravida at ligula.
