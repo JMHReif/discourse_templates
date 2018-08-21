@@ -134,9 +134,9 @@ var queries = {
 
             // Featured comm member.
             $("div#featuredDeveloper").append(
-                "<img style='height: 100%; width: 100%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
+                contentLink("<img style='height: 100%; width: 100%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
                 twin4j.date + "'" + 
-                "/>"
+                "/>", twin4j.url)
             )
         }
     }
