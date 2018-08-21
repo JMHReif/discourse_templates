@@ -6,26 +6,40 @@
     var queries = {
         topContent: {
             query: `{
-                topCommunityBlogsAndContent { url title avatar }
+                topCommunityBlogsAndContent { 
+                    title
+                    url
+                    author {
+                      name
+                      screenName
+                      avatar
+                    }
+                }                    
              }`,             
         },
         topDevs: {
             query: `{
                 topNewCertifiedDevelopers {
-                    certificationDate
-                    username
-                    name
-                    avatar
+                    developer {
+                        name
+                        screenName
+                        avatar
+                    }
                 }
             }`,
         },
         topProjects: {
             query: `{
                 topCommunityOpenSourceProjects{
-                    url
                     title
-                    releaseDate
+                    url
                     description
+                    releaseDate
+                    author {
+                      name
+                      screenName
+                      avatar
+                    }
                 }
             }`,
         },
@@ -71,6 +85,7 @@
         Object.keys(queries).map(key => {
             var pkg = queries[key];
             console.log('PKG',pkg);
+            var query = pkg.query;
             graphQL(pkg.query, data => {
                 console.log('Query ', key, 'succeeded', data);
 
