@@ -35,9 +35,9 @@ $background-color: #FBDE9C;
   margin-right: calc(-50vw + 50%);
   display: none;
 }
-//.navigation-categories .banner-box {
-//  display: block;
-//}
+.navigation-categories .banner-box {
+  display: block;
+}
 
 .x-title {
     padding-left: 15px;
@@ -156,24 +156,11 @@ $background-color: #FBDE9C;
     }
 }
 
-//CLOSE BUTTON ON THE TOP RIGHT
-//.banner-box .close {
-//    border: none;
-//    background: transparent;
-//    padding-top: 5px;
-//    float: right;
-//}
-
 //MAKE IT A FULL WIDTH BANNER
 .banner-box .container {
     max-width: 70%;
     margin: 0 auto;
 }
-//.banner-box {
-//    margin-left: calc(-50vw + 50%);
-//    margin-right: calc(-50vw + 50%);
-//
-//}
 #main-outlet {
     padding-top: 64px; /*this value must be changed if the height of the header has been changed*/
 }
