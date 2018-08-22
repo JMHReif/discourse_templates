@@ -93,9 +93,6 @@ var queries = {
             topCommunityOpenSourceProjects{
                 title
                 url
-                description
-                releaseDate
-                language
                 author {
                   name
                   screenName
