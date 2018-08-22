@@ -41,19 +41,47 @@ function dateFormat(str) {
     return month + ' ' + dt + ', ' + year;
 }
 
-var queries = {
+var combinedQuery = `{
+    topCommunityBlogsAndContent { 
+        title
+        url
+        author {
+          name
+          screenName
+          avatar
+        }
+    }                    
+    topNewCertifiedDevelopers {
+        developer {
+            name
+            screenName
+            avatar
+        }
+    }
+    topCommunityOpenSourceProjects{
+        title
+        url
+        description
+        releaseDate
+        language
+        author {
+          name
+          screenName
+          avatar
+        }
+    }
+    thisWeekInNeo4j {
+        featuredCommunityMember{
+            image
+        }
+        date
+        url
+        text
+    }
+}`;
+
+var handlers = {
     topContent: {
-        query: `{
-            topCommunityBlogsAndContent { 
-                title
-                url
-                author {
-                  name
-                  screenName
-                  avatar
-                }
-            }                    
-         }`,
          handler: data => {
             var content = data.data.topCommunityBlogsAndContent;
 
@@ -66,15 +94,6 @@ var queries = {
          }
     },
     topDevs: {
-        query: `{
-            topNewCertifiedDevelopers {
-                developer {
-                    name
-                    screenName
-                    avatar
-                }
-            }
-        }`,
         handler: data => {
             var devs = data.data.topNewCertifiedDevelopers;
 
@@ -86,20 +105,6 @@ var queries = {
         }
     },
     topProjects: {
-        query: `{
-            topCommunityOpenSourceProjects{
-                title
-                url
-                description
-                releaseDate
-                language
-                author {
-                  name
-                  screenName
-                  avatar
-                }
-            }
-        }`,
         handler: data => {
             var projs = data.data.topCommunityOpenSourceProjects;
 
@@ -115,16 +120,6 @@ var queries = {
         }
     },
     twin4j: {
-        query: `{
-            thisWeekInNeo4j {
-                featuredCommunityMember{
-                    image
-                }
-                date
-                url
-                text
-                }
-            }`,
         handler: data => {
             var twin4j = data.data.thisWeekInNeo4j;
             var featuredMember = twin4j.featuredCommunityMember;
@@ -169,22 +164,15 @@ function graphQL(query, success, fail) {
     });
 }
 
-var pageData = {};
 function pageReady() {
-    Object.keys(queries).map(key => {
-        var pkg = queries[key];
-        var query = pkg.query;
-        var handler = pkg.handler;
+    graphQL(combinedQuery, data => {
+        Object.keys(handlers).map(key => {
+            var pkg = handlers[key];
+            var handler = pkg.handler;
 
-        graphQL(pkg.query, data => {
-            console.log('Query ', key, 'succeeded', data);
-
-            if (handler) { handler(data); }
-            pageData[query] = data;
-        }, err => {
-            console.error('Query ', key, 'failed', err);
-        });
-    })
+            handler(data);            
+        })
+    }, genericError);
 }
 
 $(document).ready(pageReady);
