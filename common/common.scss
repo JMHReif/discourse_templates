@@ -129,13 +129,15 @@ $background-color: #FFFFFF;
     padding-bottom: 5px;
   }
 
-  //table {
-  //  padding: 10px;
-  //}
+  tr {
+    padding: 10px;
+  }
 
-  td, th {
+  td {
     display: table;
     color: #c6c6c6;
+  }
+  td.content {
     padding: 10px;
   }
 
