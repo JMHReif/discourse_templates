@@ -1,3 +1,36 @@
+//User Top Nav bar
+(function(){
+    var NavItem = require("discourse/models/nav-item").default;
+    var ExternalNavItem = NavItem.extend({
+        href : function() {
+            return this.get('href');
+        }.property('href')
+    });
+
+    I18n.translations.en.js.filters.users = { title: "Users", help: "User leaderboard" };
+
+    NavItem.reopenClass({
+        buildList : function(category, args) {
+            var list = this._super(category, args);
+            list.push(ExternalNavItem.create({href: '/users', name: 'users'}));
+            return list;
+        }
+    });
+
+    var UsersController = require("discourse/controllers/users").default;
+
+    UsersController.reopen({
+        filterMode: "users",
+        categories: function(){
+            return Discourse.Site.current().categories;
+        }.property(),
+        navItems: function(){
+            return NavItem.buildList(null, {filterMode: "users"});
+        }.property()
+    });
+})();
+
+//Weekly and Community banners
 var endpoint = "https://community-graphql-api.now.sh/";
 
 function avatar(data) {
