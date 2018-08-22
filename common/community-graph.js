@@ -106,12 +106,16 @@ var queries = {
         handler: data => {
             var projs = data.data.topCommunityOpenSourceProjects;
 
-            projs.map(proj => {
+            // Take first 5 only
+            projs.slice(0,5).map(proj => {
                 $("ul#communityOpenSource").append(
                     '<li class="communityopensource">' +
-                    //dateFormat(proj.releaseDate) + ' ' +
                     contentLink(proj.title, proj.url) +
                     //progLanguage(proj.language) +
+                    userTile(proj.author) +
+                    /* dateFormat(proj.releaseDate) + ' ' + */
+                    contentLink(proj.title, proj.url) + 
+                    progLanguage(proj.language) + 
                     userTile(proj.author) +
                     "</li>");
             });
@@ -191,4 +195,3 @@ function pageReady() {
 }
 
 $(document).ready(pageReady);
-
