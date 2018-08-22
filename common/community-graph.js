@@ -58,11 +58,9 @@ var queries = {
             var content = data.data.topCommunityBlogsAndContent;
 
             content.map(article => {
-                $("ul#communityBlogs").append(
-                    '<li class="community content">' +
-                    avatar(article.author) + 
-                    contentLink(article.title, article.url) + 
-                    '</li>'
+                $("table#communityBlogs").append('<tr class="community content">' +
+                    '<td class="blogs"> ' + avatar(article.author) + '</td><td> '+
+                    contentLink(article.title, article.url) + '</td></tr>'
                 );
             });
          }
@@ -82,9 +80,8 @@ var queries = {
 
             devs.map(obj => obj.developer).forEach(dev => {
                 $("table#devList").append('<tr class="developer">' +
-                    '<td class="dev">'+avatar(dev) + '</td><td>' +
-                    contentLink(dev.screenName || dev.name,
-                        '/users/' + dev.name) + '</td></tr>');
+                    '<td class="dev"> '+ avatar(dev) + '</td><td> ' +
+                    contentLink(dev.screenName || dev.name, '/users/' + dev.name) + '</td></tr>');
             });
             //$('ul#devList')
         }
@@ -109,16 +106,14 @@ var queries = {
 
             // Take first 5 only
             projs.slice(0,5).map(proj => {
-                $("ul#communityOpenSource").append(
-                    '<li class="communityopensource">' +
-                    contentLink(proj.title, proj.url) +
+                $("table#communityOpenSource").append('<tr class="communityopensource">' +
+                    '<td class="proj"> ' + contentLink(proj.title, proj.url) + '</td><td> ' +
                     //progLanguage(proj.language) +
-                    userTile(proj.author) +
+                    userTile(proj.author) + '</td><td> ' +
                     /* dateFormat(proj.releaseDate) + ' ' + */
-                    contentLink(proj.title, proj.url) + 
-                    progLanguage(proj.language) + 
-                    userTile(proj.author) +
-                    "</li>");
+                    contentLink(proj.title, proj.url) + '</td><td> ' +
+                    progLanguage(proj.language) + '</td><td>' +
+                    userTile(proj.author) + '</td></tr>');
             });
         }
     },
