@@ -58,8 +58,8 @@ var queries = {
             var content = data.data.topCommunityBlogsAndContent;
 
             content.map(article => {
-                $("table#communityBlogs").append('<tr class="community content">' +
-                    '<td class="blogs"> ' + avatar(article.author) + '</td><td> '+
+                $("table#communityBlogs").append('<tr class="community blogs"><td class="blogs"> ' +
+                    avatar(article.author) + '</td><td> ' +
                     contentLink(article.title, article.url) + '</td></tr>'
                 );
             });
@@ -79,11 +79,10 @@ var queries = {
             var devs = data.data.topNewCertifiedDevelopers;
 
             devs.map(obj => obj.developer).forEach(dev => {
-                $("table#devList").append('<tr class="developer">' +
-                    '<td class="dev"> '+ avatar(dev) + '</td><td> ' +
-                    contentLink(dev.screenName || dev.name, '/users/' + dev.name) + '</td></tr>');
+                $("table#devList").append('<tr class="developer"><td class="dev"> ' +
+                avatar(dev) + '</td><td> ' +
+                contentLink(dev.screenName || dev.name, '/users/' + dev.name) + '</td></tr>');
             });
-            //$('ul#devList')
         }
     },
     topProjects: {
@@ -106,14 +105,12 @@ var queries = {
 
             // Take first 5 only
             projs.slice(0,5).map(proj => {
-                $("table#communityOpenSource").append('<tr class="communityopensource">' +
-                    '<td class="proj"> ' + contentLink(proj.title, proj.url) + '</td><td> ' +
-                    //progLanguage(proj.language) +
-                    userTile(proj.author) + '</td><td> ' +
-                    /* dateFormat(proj.releaseDate) + ' ' + */
-                    contentLink(proj.title, proj.url) + '</td><td> ' +
-                    progLanguage(proj.language) + '</td><td>' +
-                    userTile(proj.author) + '</td></tr>');
+                $("table#communityOpenSource").append('<tr class="open source"><td class="proj"> ' +
+                contentLink(proj.title, proj.url) + '</td><td> ' +
+                userTile(proj.author) + '</td><td> ' +
+                contentLink(proj.title, proj.url) + '</td><td> ' +
+                progLanguage(proj.language) + '</td><td>' +
+                userTile(proj.author) + '</td></tr>');
             });
         }
     },
