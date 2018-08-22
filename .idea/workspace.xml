@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ed17927-fe16-44ec-9014-b5584e225324" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/common/after_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/after_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/community-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/common/community-graph.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="after_header.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="after_header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/after_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="103" column="64" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="64" />
+            <state relative-caret-position="510">
+              <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
@@ -34,17 +34,17 @@
       <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+            <state relative-caret-position="15">
+              <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="community-graph.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="community-graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/community-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            <state relative-caret-position="450">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,9 +57,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/after_header.html" />
-        <option value="$PROJECT_DIR$/common/common.scss" />
         <option value="$PROJECT_DIR$/common/community-graph.js" />
+        <option value="$PROJECT_DIR$/common/common.scss" />
+        <option value="$PROJECT_DIR$/common/after_header.html" />
       </list>
     </option>
   </component>
@@ -73,7 +73,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
+    <option name="x" value="134" />
     <option name="y" value="23" />
     <option name="width" value="1325" />
     <option name="height" value="941" />
@@ -186,15 +186,15 @@
       <workItem from="1534851128227" duration="8000" />
       <workItem from="1534851151542" duration="7801000" />
       <workItem from="1534933379200" duration="752000" />
-      <workItem from="1534941767941" duration="3791000" />
+      <workItem from="1534941767941" duration="5450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15867000" />
+    <option name="totallyTimeSpent" value="17526000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="23" width="1325" height="941" extended-state="0" />
+    <frame x="134" y="23" width="1325" height="941" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -562,17 +562,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/community-graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/after_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="103" column="64" selection-start-line="103" selection-start-column="45" selection-end-line="103" selection-end-column="64" />
+        <state relative-caret-position="510">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
@@ -581,13 +588,6 @@
             <element signature="n#style#0;n#img#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#h2#0;n#div#2;n#div#0;n#div#0;n#section#2;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/community-graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
