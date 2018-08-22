@@ -92,6 +92,7 @@ $background-color: #FFFFFF;
 
   .col2, .col3, .col4 {
     text-align: center;
+    color: #c6c6c6;
   }
 
   .row::after {
@@ -127,6 +128,14 @@ $background-color: #FFFFFF;
   #my-button {
     text-align: center;
     padding-bottom: 5px;
+  }
+
+  table {
+    padding: 10px;
+  }
+
+  td, th {
+    display: table;
   }
 
   img.avatar {
