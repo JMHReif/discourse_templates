@@ -56,12 +56,20 @@ $background-color: #FFFFFF;
 
 //COLUMNS MANAGEMENT
 .col3 {
-    //width: 30%;
     float: left;
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+}
+#newCertifiedDevelopers.col3 {
+    width: 28%;
+}
+#communityBlogs.col3 {
+    width: 28%;
+}
+#communityOpenSource.col3 {
+    width: 34%;
 }
 
 .col2 {
