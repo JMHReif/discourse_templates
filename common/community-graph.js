@@ -80,9 +80,9 @@ var queries = {
             var devs = data.data.topNewCertifiedDevelopers;
 
             devs.map(obj => obj.developer).forEach(dev => {
-                $("table#devList").append('<tr class="developer">' + 
+                $("table#devList").append('<tr class="developer">' +
                     '<td class="dev">'+avatar(dev) + '</td><td>' +
-                    contentLink(dev.screenName || dev.name, 
+                    contentLink(dev.screenName || dev.name,
                         '/users/' + dev.name) + '</td></tr>');
             });
             //$('ul#devList')
@@ -109,10 +109,10 @@ var queries = {
             projs.map(proj => {
                 $("ul#communityOpenSource").append(
                     '<li class="communityopensource">' +
-                    dateFormat(proj.releaseDate) + ' ' + 
-                    contentLink(proj.title, proj.url) + 
-                    progLanguage(proj.language) + 
-                    userTile(proj.author) + 
+                    // dateFormat(proj.releaseDate) + ' ' +
+                    contentLink(proj.title, proj.url) +
+                    // progLanguage(proj.language) +
+                    userTile(proj.author) +
                     "</li>");
             });
         }
