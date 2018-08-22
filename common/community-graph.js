@@ -113,7 +113,7 @@ var handlers = {
                 $("table#communityOpenSource").append('<tr class="open source"><td class="proj"> ' +
                 userTile(proj.author) + '</td><td> ' +
                 contentLink(proj.title, proj.url) + '</td><td> ' +
-                progLanguage(proj.language) + '</td><td>';
+                progLanguage(proj.language) + '</td></tr>');
             });
         }
     },
