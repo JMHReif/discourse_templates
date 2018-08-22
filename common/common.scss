@@ -7,130 +7,135 @@ $background-color: #FFFFFF;
 /*-------------------------------------------------
    SECTION:  BOXES
 -------------------------------------------------*/
-.section-header {
+section#communityHeader {
+  .section-header {
     padding-bottom: 20px;
     h2 {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-}
+  }
 
-//show only on main page
-.banner-box {
-  margin-bottom: 20px;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  display: none;
-}
-.navigation-categories .banner-box {
-  display: block;
-}
-.welcome.banner-box {
-  background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
-}
+  //show only on main page
+  .banner-box {
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $background-color; /* to be sure that even if the image above will not be loaded there will be at least a colored background */
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: none;
+  }
+  .navigation-categories .banner-box {
+    display: block;
+  }
+  .welcome.banner-box {
+    background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
+  }
 
-.d-label {
-  color: white;
-}
+  .d-label {
+    color: white;
+  }
 
-.title {
+  .title {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 15px;
     text-align: center;
     color: $background-color;
-}
+  }
 
-.description p {
+  .description p {
     margin-bottom: 10px;
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
-}
+  }
 
-.banner-box .single-box {
+  .banner-box .single-box {
     padding-bottom: 20px;
-        .icon {
-        font-size: 70px;
+    .icon {
+      font-size: 70px;
     }
-}
+  }
 
-//COLUMNS MANAGEMENT
-.col3 {
+  //COLUMNS MANAGEMENT
+  .col3 {
     width: 30%;
     float: left;
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-}
+  }
 
-.col2 {
+  .col2 {
     width: 45%;
     float: left;
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-}
+  }
 
-.col4 {
+  .col4 {
     width: 22.5%;
     float: left;
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-}
+  }
 
-.container::after, .row::after {
+  .container::after, .row::after {
     clear: both;
-}
+  }
 
-.col2, .col3, .col4 {
+  .col2, .col3, .col4 {
     text-align: center;
-}
+  }
 
-.row::after {
+  .row::after {
     content: " ";
     display: table;
-}
+  }
 
-//ICON AND BOX HEADING COLOR
-.banner-box .single-box .icon, .single-box h3 {
+  //ICON AND BOX HEADING COLOR
+  .banner-box .single-box .icon, .single-box h3 {
     color: $main-color;
-}
+  }
 
-//BOX HEADING POSITIONING
-.banner-box .single-box h3 {
+  //BOX HEADING POSITIONING
+  .banner-box .single-box h3 {
     margin-top: 20px;
     text-align: center;
-}
+  }
 
-//COLORED LINE
-.colored-line {
+  //COLORED LINE
+  .colored-line {
     margin: auto;
     width: 165px;
     height: 1px;
     background: $main-color;
-}
+  }
 
-//SINGLE BOX, TEXT ALIGNMENT
-.box p {
+  //SINGLE BOX, TEXT ALIGNMENT
+  .box p {
     text-align: center;
-}
+  }
 
-//TEXT ALIGNMENT INSIDE BUTTONS
-#my-button {
+  //TEXT ALIGNMENT INSIDE BUTTONS
+  #my-button {
     text-align: center;
     padding-bottom: 5px;
-}
+  }
 
-//IMAGE SIZE AS ICON SIZE
-.responsive-img {
+  image.avatar {
+    width: 80%;
+  }
+
+  //IMAGE SIZE AS ICON SIZE
+  .responsive-img {
     border-style: none;
     border-width: 1px;
     height: 70px;
@@ -138,31 +143,32 @@ $background-color: #FFFFFF;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+  }
 
-//LIST ALIGNMENT
-.feature-list {
+  //LIST ALIGNMENT
+  .feature-list {
     text-align: left;
     list-style-type: none;
-}
+  }
 
-//BUTTON BACKGROUND
-.col2, .col3, .col4 {
+  //BUTTON BACKGROUND
+  .col2, .col3, .col4 {
     .btn.btn-icon-text.ember-view {
-        background: $main-color;
+      background: $main-color;
     }
-}
+  }
 
-//MAKE IT A FULL WIDTH BANNER
-.banner-box .container {
+  //MAKE IT A FULL WIDTH BANNER
+  .banner-box .container {
     max-width: 80%;
     margin: 0 auto;
-}
-#main-outlet {
+  }
+  #main-outlet {
     padding-top: 64px; /*this value must be changed if the height of the header has been changed*/
-}
-.navigation-container,
-.alert.alert-info {
+  }
+  .navigation-container,
+  .alert.alert-info {
     margin-top: 18px;
     margin-bottom: 0px;
+  }
 }
