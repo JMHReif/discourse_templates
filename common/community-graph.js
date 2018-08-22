@@ -109,9 +109,9 @@ var queries = {
             projs.map(proj => {
                 $("ul#communityOpenSource").append(
                     '<li class="communityopensource">' +
-                    // dateFormat(proj.releaseDate) + ' ' +
+                    //dateFormat(proj.releaseDate) + ' ' +
                     contentLink(proj.title, proj.url) +
-                    // progLanguage(proj.language) +
+                    //progLanguage(proj.language) +
                     userTile(proj.author) +
                     "</li>");
             });
