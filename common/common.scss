@@ -92,7 +92,6 @@ $background-color: #FFFFFF;
 
   .col2, .col3, .col4 {
     text-align: center;
-    color: #c6c6c6;
   }
 
   .row::after {
@@ -130,12 +129,14 @@ $background-color: #FFFFFF;
     padding-bottom: 5px;
   }
 
-  table {
-    padding: 10px;
-  }
+  //table {
+  //  padding: 10px;
+  //}
 
   td, th {
     display: table;
+    color: #c6c6c6;
+    padding: 10px;
   }
 
   img.avatar {
