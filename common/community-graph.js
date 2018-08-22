@@ -111,11 +111,9 @@ var handlers = {
             // Take first 5 only
             projs.slice(0,5).map(proj => {
                 $("table#communityOpenSource").append('<tr class="open source"><td class="proj"> ' +
-                contentLink(proj.title, proj.url) + '</td><td> ' +
                 userTile(proj.author) + '</td><td> ' +
                 contentLink(proj.title, proj.url) + '</td><td> ' +
-                progLanguage(proj.language) + '</td><td>' +
-                userTile(proj.author) + '</td></tr>');
+                progLanguage(proj.language) + '</td><td>';
             });
         }
     },
