@@ -80,10 +80,10 @@ var queries = {
             var devs = data.data.topNewCertifiedDevelopers;
 
             devs.map(obj => obj.developer).forEach(dev => {
-                $("ul#devList").append('<li class="developer">' + 
-                    avatar(dev) + 
+                $("table#devList").append('<tr class="developer">' + 
+                    '<td class="dev">'+avatar(dev) + '</td><td>' +
                     contentLink(dev.screenName || dev.name, 
-                        '/users/' + dev.name) + '</li>');
+                        '/users/' + dev.name) + '</td></tr>');
             });
             //$('ul#devList')
         }
@@ -93,6 +93,9 @@ var queries = {
             topCommunityOpenSourceProjects{
                 title
                 url
+                description
+                releaseDate
+                language
                 author {
                   name
                   screenName
