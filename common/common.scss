@@ -129,13 +129,14 @@ $background-color: #FFFFFF;
     padding-bottom: 5px;
   }
 
+  table {
+    border-spacing: 10px;
+  }
   tr {
-    padding: 10px;
+    padding-bottom: 10px;
     line-height: 19.6px;
   }
-
   td {
-    display: table;
     color: #c6c6c6;
   }
 
