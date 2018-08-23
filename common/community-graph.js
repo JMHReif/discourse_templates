@@ -132,7 +132,7 @@ var handlers = {
             var features = twin4j.features;
 
             $("div#twin4jContainer").append(
-                '<h4>' + contentLink(twin4j.date, twin4j.url) + '</h4>' +
+                '<h3>' + contentLink(twin4j.date, twin4j.url) + '</h3>' +
                 '<p class="weekly box">' + 
                 features.map(feature => '<li>' + contentLink(feature.tag, feature.url) + '</li>').join('\n') +
                 '</p>'
