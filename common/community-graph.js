@@ -131,7 +131,7 @@ var handlers = {
 
             // Featured comm member.
             $("div#featuredDeveloper").append(
-                contentLink("<img style='height: 80%; width: 80%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
+                contentLink("<img class='featured member' src='" + featuredMember.image + "' alt='" +
                 twin4j.date + "'" + 
                 "/>", twin4j.url)
             )

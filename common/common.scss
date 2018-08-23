@@ -162,6 +162,11 @@ table {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+  #featuredDeveloper {
+    height: 150px;
+    object-fit: contain;
+
+  }
 
   //LIST ALIGNMENT
   .feature-list {
