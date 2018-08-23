@@ -59,7 +59,8 @@ $background-color: #FFFFFF;
   }
 
   .col3 h2 {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
   }
 
   //COLUMNS MANAGEMENT
@@ -117,7 +118,7 @@ $background-color: #FFFFFF;
   //COLORED LINE
   .colored-line {
     margin: auto;
-    width: 300px;
+    width: 250px;
     height: 1px;
     background: $main-color;
   }

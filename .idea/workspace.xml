@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ed17927-fe16-44ec-9014-b5584e225324" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/common/after_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/after_header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/community-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/common/community-graph.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="after_header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/after_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="122" column="52" lean-forward="true" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
+            <state relative-caret-position="569">
+              <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file leaf-file-name="common.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+            <state relative-caret-position="471">
+              <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -57,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/after_header.html" />
         <option value="$PROJECT_DIR$/common/community-graph.js" />
+        <option value="$PROJECT_DIR$/common/after_header.html" />
         <option value="$PROJECT_DIR$/common/common.scss" />
       </list>
     </option>
@@ -186,12 +186,12 @@
       <workItem from="1534851128227" duration="8000" />
       <workItem from="1534851151542" duration="7801000" />
       <workItem from="1534933379200" duration="752000" />
-      <workItem from="1534941767941" duration="20490000" />
+      <workItem from="1534941767941" duration="20647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32566000" />
+    <option name="totallyTimeSpent" value="32723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="107" y="24" width="1325" height="941" extended-state="0" />
@@ -532,16 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/after_header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="122" column="52" lean-forward="true" selection-start-line="122" selection-start-column="52" selection-end-line="122" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/community-graph.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -549,10 +539,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/after_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/common/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="62" column="3" lean-forward="true" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
+        <state relative-caret-position="471">
+          <caret line="120" column="17" lean-forward="true" selection-start-line="120" selection-start-column="17" selection-end-line="120" selection-end-column="17" />
         </state>
       </provider>
     </entry>
