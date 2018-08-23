@@ -42,7 +42,7 @@ function dateFormat(str) {
 }
 
 var combinedQuery = `{
-    topCommunityBlogsAndContent { 
+    topCommunityBlogsAndContent(first:5) { 
         title
         url
         author {
@@ -51,14 +51,14 @@ var combinedQuery = `{
           avatar
         }
     }                    
-    topNewCertifiedDevelopers {
+    topNewCertifiedDevelopers(first:5) {
         developer {
             name
             screenName
             avatar
         }
     }
-    topCommunityOpenSourceProjects{
+    topCommunityOpenSourceProjects(first:5) {
         title
         url
         description
@@ -74,6 +74,14 @@ var combinedQuery = `{
         featuredCommunityMember{
             image
         }
+    features {
+        tag
+        url
+    }
+    articles {
+        tag
+        url
+    }
         date
         url
         text
@@ -123,9 +131,9 @@ var handlers = {
             var featuredMember = twin4j.featuredCommunityMember;
 
             $("div#twin4jContainer").append(
-                '<h4>' + contentLink(twin4j.date, twin4j.url) + '</h4>' +
+                '<h4>' + contentLink(twin4j.date, twin4j.url) + '</h4><br/>' +
                 '<p class="weekly box">' + 
-                twin4j.text +
+                contentLink(features.tag, features.url) +
                 '</p>'
             );
 
