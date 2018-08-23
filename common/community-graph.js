@@ -16,9 +16,9 @@ function contentLink(title, url) {
 function userTile(data) {    
     return ('<div class="user tile">' +
         avatar(data) + 
-        "<a href='/users/" + data.name + "'>" + 
-        (data.name || data.screenName) + 
-        "</a>" +
+        // "<a href='/users/" + data.name + "'>" +
+        // (data.name || data.screenName) +
+        // "</a>" +
         '</div>');
 }
 
@@ -111,6 +111,7 @@ var handlers = {
             // Take first 5 only
             projs.slice(0,5).map(proj => {
                 $("table#communityOpenSource").append('<tr class="open source"><td class="proj"> ' +
+                userTile(proj.author) + '</td><td> ' +
                 contentLink(proj.title, proj.url) + '</td><td> ' +
                 progLanguage(proj.language) + '</td></tr>');
             });
