@@ -4,7 +4,7 @@ var endpoint = "https://community-graphql-api.now.sh/";
 function avatar(data) {
     return (
         "<a href='/users/" + data.name + "' alt='" + (data.name || data.screenName) + "'>" +
-        "<img style='height: 75%; width: 75%; object-fit: contain' alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> " +
+        "<img alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> " +
         "</a>"
     );
 }
@@ -131,7 +131,7 @@ var handlers = {
 
             // Featured comm member.
             $("div#featuredDeveloper").append(
-                contentLink("<img class='featured member' src='" + featuredMember.image + "' alt='" +
+                contentLink("<img style='height: 75%; width: 75%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
                 twin4j.date + "'" + 
                 "/>", twin4j.url)
             )
