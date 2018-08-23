@@ -74,14 +74,14 @@ var combinedQuery = `{
         featuredCommunityMember{
             image
         }
-    features {
-        tag
-        url
-    }
-    articles {
-        tag
-        url
-    }
+        features {
+            tag
+            url
+        }
+        articles {
+            tag
+            url
+        }
         date
         url
         text
@@ -129,11 +129,12 @@ var handlers = {
         handler: data => {
             var twin4j = data.data.thisWeekInNeo4j;
             var featuredMember = twin4j.featuredCommunityMember;
+            var features = twin4j.features;
 
             $("div#twin4jContainer").append(
-                '<h4>' + contentLink(twin4j.date, twin4j.url) + '</h4><br/>' +
+                '<h4>' + contentLink(twin4j.date, twin4j.url) + '</h4>' +
                 '<p class="weekly box">' + 
-                contentLink(features.tag, features.url) +
+                features.map(feature => '<li>' + contentLink(feature.tag, feature.url) + '</li>').join('\n') +
                 '</p>'
             );
 
