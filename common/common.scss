@@ -118,9 +118,10 @@ $background-color: #FFFFFF;
   //COLORED LINE
   .colored-line {
     margin: auto;
-    width: 250px;
-    height: 1px;
+    width: 200px;
+    height: 1.5px;
     background: $main-color;
+    color: #c6c6c6;
   }
 
   //SINGLE BOX, TEXT ALIGNMENT
