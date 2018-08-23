@@ -4,7 +4,7 @@ var endpoint = "https://community-graphql-api.now.sh/";
 function avatar(data) {
     return (
         "<a href='/users/" + data.name + "' alt='" + (data.name || data.screenName) + "'>" +
-        "<img alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> " + 
+        "<img style='height: 75%; width: 75%; object-fit: contain' alt='" + data.name + "' class='avatar' src='" + data.avatar + "'/> " +
         "</a>"
     );
 }

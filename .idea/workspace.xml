@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3ed17927-fe16-44ec-9014-b5584e225324" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/common/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/community-graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/common/community-graph.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="after_header.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="after_header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/after_header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
@@ -25,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="150" column="3" lean-forward="true" selection-start-line="150" selection-start-column="3" selection-end-line="150" selection-end-column="3" />
+            <state relative-caret-position="228">
+              <caret line="148" column="3" selection-start-line="148" selection-start-column="3" selection-end-line="148" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -37,8 +38,11 @@
       <file leaf-file-name="community-graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/community-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="89" column="54" lean-forward="true" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+            <state relative-caret-position="120">
+              <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,8 +62,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/common/after_header.html" />
-        <option value="$PROJECT_DIR$/common/community-graph.js" />
         <option value="$PROJECT_DIR$/common/common.scss" />
+        <option value="$PROJECT_DIR$/common/community-graph.js" />
       </list>
     </option>
   </component>
@@ -186,12 +190,12 @@
       <workItem from="1534851128227" duration="8000" />
       <workItem from="1534851151542" duration="7801000" />
       <workItem from="1534933379200" duration="752000" />
-      <workItem from="1534941767941" duration="22281000" />
+      <workItem from="1534941767941" duration="22688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34357000" />
+    <option name="totallyTimeSpent" value="34764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="130" y="23" width="1325" height="941" extended-state="0" />
@@ -534,8 +538,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/community-graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="89" column="54" lean-forward="true" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/common.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="148" column="3" selection-start-line="148" selection-start-column="3" selection-end-line="148" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -546,13 +560,6 @@
           <folding>
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/common.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="150" column="3" lean-forward="true" selection-start-line="150" selection-start-column="3" selection-end-line="150" selection-end-column="3" />
         </state>
       </provider>
     </entry>
