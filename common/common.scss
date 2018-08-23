@@ -32,8 +32,10 @@ $background-color: #FFFFFF;
     background-image: url("https://s3.amazonaws.com/dev.assets.neo4j.com/wp-content/uploads/gradient-sphere.jpg");
   }
 
-  .d-label {
-    color: white;
+  section#communityHeader {
+    .d-label {
+      color: white;
+    }
   }
 
   .title {
@@ -193,6 +195,8 @@ table {
     margin-bottom: 0px;
   }
 
-  p.weekly.box > li {
-    text-align: left;
+  div#twin4j {
+    li {
+      text-align: left;
+    }
   }
