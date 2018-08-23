@@ -146,6 +146,9 @@ table {
     color: #c6c6c6;
     padding: 10px 5px;
   }
+  a .community {
+    color: white;
+  }
 
   img.avatar {
     width: 30px;
@@ -163,9 +166,8 @@ table {
     background-attachment: fixed;
   }
   #featuredDeveloper {
-    height: 175px;
+    height: 160px;
     object-fit: contain;
-
   }
 
   //LIST ALIGNMENT
