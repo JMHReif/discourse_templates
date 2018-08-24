@@ -182,4 +182,9 @@ function pageReady() {
     }, genericError);
 }
 
+$('button#projects-button').click(function {
+    window.location.href = "http://www.mypage.com/photography.html";
+    $('button#create-topic').trigger('click');
+});
+
 $(document).ready(pageReady);
