@@ -1,5 +1,5 @@
 //Weekly and Community banners
-var endpoint = "https://community-graphql-api.now.sh/";
+var endpoint = "https://communityapi.neo4jlabs.com/";
 
 function avatar(data) {
     return (
