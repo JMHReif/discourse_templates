@@ -60,10 +60,10 @@ $background-color: #FFFFFF;
     }
   }
 
-  .col3 h2 {
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
-  }
+  //.col2 h2, .col3 h2 {
+  //  border-bottom: 1px solid black;
+  //  padding-bottom: 5px;
+  //}
 
   //COLUMNS MANAGEMENT
   .col3 {
@@ -73,6 +73,11 @@ $background-color: #FFFFFF;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+
+    h2 {
+      border-bottom: 1px solid black;
+      padding-bottom: 5px;
+    }
   }
 
   .col2 {
@@ -82,6 +87,11 @@ $background-color: #FFFFFF;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+
+    h2 {
+      border-bottom: 1px solid black;
+      padding-bottom: 5px;
+    }
   }
 
   .col4 {

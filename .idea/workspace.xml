@@ -4,6 +4,7 @@
     <list default="true" id="3ed17927-fe16-44ec-9014-b5584e225324" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/after_header.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/after_header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="after_header.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/after_header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="692">
-              <caret line="166" column="30" lean-forward="true" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+            <state relative-caret-position="302">
+              <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -26,8 +27,8 @@
       <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1764">
-              <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+            <state relative-caret-position="41">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
@@ -35,8 +36,8 @@
       <file leaf-file-name="community-graph.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/community-graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="134" column="20" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+            <state relative-caret-position="803">
+              <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -56,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/common.scss" />
         <option value="$PROJECT_DIR$/common/community-graph.js" />
+        <option value="$PROJECT_DIR$/common/common.scss" />
         <option value="$PROJECT_DIR$/common/after_header.html" />
       </list>
     </option>
@@ -72,7 +73,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="606" />
+    <option name="x" value="188" />
     <option name="y" value="23" />
     <option name="width" value="1325" />
     <option name="height" value="941" />
@@ -85,9 +86,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,6 +102,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,14 +188,15 @@
       <workItem from="1534933379200" duration="752000" />
       <workItem from="1534941767941" duration="23066000" />
       <workItem from="1535014543676" duration="1302000" />
+      <workItem from="1535102922141" duration="2170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37098000" />
+    <option name="totallyTimeSpent" value="39735000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="115" y="23" width="1325" height="941" extended-state="0" />
+    <frame x="188" y="23" width="1325" height="941" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -211,7 +213,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2213562" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2244739" />
       <window_info anchor="bottom" id="Graph Database Console" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -220,35 +222,12 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Graph Database Console" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2213562" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="right" id="Graph Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,22 +518,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common/community-graph.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="134" column="20" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+        <state relative-caret-position="803">
+          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1764">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+        <state relative-caret-position="41">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/after_header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="166" column="30" lean-forward="true" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
+        <state relative-caret-position="302">
+          <caret line="155" column="22" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
         </state>
       </provider>
     </entry>
