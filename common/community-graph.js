@@ -91,7 +91,7 @@ var combinedQuery = `{
 var handlers = {
     topContent: {
          handler: data => {
-            var content = data.data.topCommunityBlogsAndContent;
+            var content = data ? data.data.topCommunityBlogsAndContent : [];
 
             content.map(article => {
                 $("table#communityBlogs").append('<tr class="community blogs"><td class="blogs"> ' +
@@ -103,7 +103,7 @@ var handlers = {
     },
     topDevs: {
         handler: data => {
-            var devs = data.data.topNewCertifiedDevelopers;
+            var devs = data ? data.data.topNewCertifiedDevelopers : [];
 
             devs.map(obj => obj.developer).forEach(dev => {
                 $("table#devList").append('<tr class="developer"><td class="dev"> ' +
@@ -114,7 +114,7 @@ var handlers = {
     },
     topProjects: {
         handler: data => {
-            var projs = data.data.topCommunityOpenSourceProjects;
+            var projs = data ? data.data.topCommunityOpenSourceProjects : [];
 
             // Take first 5 only
             projs.slice(0,5).map(proj => {
@@ -127,9 +127,9 @@ var handlers = {
     },
     twin4j: {
         handler: data => {
-            var twin4j = data.data.thisWeekInNeo4j;
+            var twin4j = data ? data.data.thisWeekInNeo4j : null;
             var featuredMember = twin4j.featuredCommunityMember;
-            var features = twin4j.features;
+            var features = twin4j.features || [];
 
             $("div#twin4jContainer").append(
                 '<h3>' + contentLink(twin4j.date, twin4j.url) + '</h3>' +
@@ -139,11 +139,13 @@ var handlers = {
             );
 
             // Featured comm member.
-            $("div#featuredDeveloper").append(
-                contentLink("<img style='height: 75%; width: 75%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
-                twin4j.date + "'" + 
-                "/>", twin4j.url)
-            )
+            if (featuredMember) {            
+                $("div#featuredDeveloper").append(
+                    contentLink("<img style='height: 75%; width: 75%; object-fit: contain' class='featured member' src='" + featuredMember.image + "' alt='" +
+                    twin4j.date + "'" + 
+                    "/>", twin4j.url)
+                )
+            }
         }
     }
 }
@@ -173,6 +175,9 @@ function graphQL(query, success, fail) {
 
 function pageReady() {
     graphQL(combinedQuery, data => {
+        if (!data || !data.data) {
+            console.warn("Bad data returned by graphql endpoint",data);
+        }
         Object.keys(handlers).map(key => {
             var pkg = handlers[key];
             var handler = pkg.handler;
