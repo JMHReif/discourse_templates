@@ -133,12 +133,12 @@ var handlers = {
         handler: data => {
             var twin4j = data ? data.data.thisWeekInNeo4j : null;
             var featuredMember = twin4j.featuredCommunityMember;
-            var features = twin4j.features || [];
+            var topItems = twin4j.topItems || [];
 
             $("div#twin4jContainer").append(
                 '<h3>' + contentLink(twin4j.date, twin4j.url) + '</h3>' +
                 '<p class="weekly box">' + 
-                features.map(feature => '<li>' + contentLink(topItems.tag, topItems.url) + '</li>').join('\n') +
+                topItems.map(topItems => '<li>' + contentLink(topItems.tag, topItems.url) + '</li>').join('\n') +
                 '</p>'
             );
 
